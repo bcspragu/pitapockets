@@ -1,0 +1,73 @@
+html, body, .fill-height {
+  height: 100%;
+}
+
+body {
+  background-color: #FFDC00;
+  font-family: 'Lilita One', cursive;
+  overflow: hidden;
+}
+
+.site-title {
+  font-size: 75px;
+  color: #B10DC9;
+  text-shadow: 0px 4px 10px rgba(0,0,0,0.15),
+               0px 14px 2px rgba(0,0,0,0.1),
+               0px 24px 30px rgba(0,0,0,0.1);
+}
+
+.underline-title {
+  background-color: #B10DC9;
+  height:5px;
+  width: 75%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  opacity: 0;
+}
+
+.main-area {
+  opacity: 0;
+  margin-top: 25px;
+}
+
+.address {
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 25px;
+  opacity: 0;
+}
+
+.times  {
+  font-size: 20px;
+  line-height: 25px;
+  margin-top: 20px;
+  opacity: 0;
+}
+
+.menu-item {
+}
+
+.menu-item img {
+  height: 200px;
+}
+
+.menu-item-title {
+  font-size: 30px;
+}
+
+.menu-item-price {
+  font-size: 15px;
+  margin-top: -5px;
+}
+
+.menu-item-description {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.construction-notice {
+  font-size: 40px;
+  margin-top: 25px;
+  color: #B10DC9;
+}
