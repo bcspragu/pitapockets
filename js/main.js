@@ -6,6 +6,7 @@ $(function(){
     $('.site-title').animate({'margin-top': 0},500,function(){
       $('.underline-title').animate({opacity: 1},500);
       $('.main-area,.times,.address').animate({opacity: 1},500);
+      $('.halal,.catering').animate({opacity: 1},500);
     });
   },750);
 });
