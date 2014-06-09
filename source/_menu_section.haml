@@ -1,0 +1,13 @@
+.large-6.columns.menu-section
+  .title=menu['title']
+  .subtitle.text-justify=menu['subheading']
+  -if menu['subsections']
+    -menu['subsections'].each do |title, subsection|
+      .subheading=subsection['title']
+      -subsection['items'].values.each do |item|
+        =partial 'menu_item', locals: {item: item}
+  -else
+    -menu['items'].values.each do |item|
+      =partial 'menu_item', locals: {item: item}
+    
+

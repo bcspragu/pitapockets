@@ -1,0 +1,37 @@
+<!doctype html>
+%html.no-js{lang: 'en'}
+  %head
+    %meta{charset: 'utf-8'}
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1.0'}
+    %title Pita Pockets Amherst
+    %link{rel: 'stylesheet', href: 'css/foundation.css'}
+    %link{rel: 'stylesheet', href: 'http://fonts.googleapis.com/css?family=Lilita+One', type: 'text/css'}
+    %script{src: 'js/vendor/modernizr.js'}
+  %body
+    .row
+      .large-12.columns
+        .row
+          .large-3.address.columns.large-text-right.small-text-center
+            %div 103 N Pleasant St
+            %div Amherst, MA 01002
+            %div (413) 256-3600
+          .large-6.columns
+            %img.halal{src: '/images/halal.png', width:'75px'}
+            .site-title.text-center Pita Pockets
+            .center-block.underline-title
+            .catering.text-center We cater! Call or visit us for details
+          .large-3.times.columns.large-text-right.small-text-center
+            %div Monday - Friday: 11 am - 11 pm
+            %div Saturday - Sunday: 11 am - 11 pm
+        .row.main-area
+          .large-12.columns
+            -menu = YAML::load_file(File.join(__dir__,'menu_items.yml'))
+            -menu.values.each_slice(2) do |sections|
+              .row
+                -sections.each do |section|
+                  =partial 'menu_section', locals: {menu: section}
+    %script{src: 'js/vendor/jquery.js'}
+    %script{src: 'js/foundation/foundation.js'}
+    %script{src: 'js/main.js'}
+    :javascript
+      $(document).foundation();

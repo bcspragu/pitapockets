@@ -1,0 +1,6 @@
+.menu-item
+  %div.clearfix
+    %span.left.title=item['title']
+    %span.right.price=item['price']
+  -if item['description']
+    .description.text-justify=item['description']
